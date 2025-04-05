@@ -1,11 +1,13 @@
 ---
-import '@styles/global.css';
-import { getCollection } from 'astro:content';
+import BlogPost from '../components/BlogPost.astro';
 import { siteConfig } from '../config/site-config';
 import MainLayout from '../layouts/MainLayout.astro';
-import TypedBlogPost from 'src/components/TypedBlogPost.astro';
+import '@styles/global.css';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const posts = await Astro.glob(`./posts-olds/*.{md,mdx}`);
 
-const blogPost = await getCollection('blog');
+// console.log("🚀 ~ posts:", posts);
 ---
 
 <MainLayout title="Antonio Pages">
@@ -22,7 +24,7 @@ const blogPost = await getCollection('blog');
 
         <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
           {
-            blogPost.map((post) =><TypedBlogPost post = { post }/> )
+            posts.map((post) =><BlogPost { ...post }/> )
           }
 
         </div>

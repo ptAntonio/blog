@@ -1,0 +1,12 @@
+{
+  "tailwindcss-intellisense.trace.server": "messages",
+  "tailwindCSS.emmetCompletions": true,
+  "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+    "live-server-extension": true,
+    "live-preview-extension": true
+  },
+  "console-ninja.allowedHosts": [
+    "localhost:4321"
+  ],
+  "livePreview.defaultPreviewPath": "/dist/index.html"
+}
