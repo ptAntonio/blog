@@ -13,7 +13,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://ptantonio.github.io',
-  base: 'blog',
+  base: '/blog',
 
   adapter: netlify(),
 });
