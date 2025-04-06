@@ -1,5 +1,5 @@
 ---
-// import '@styles/global.css';
+import '@styles/global.css';
 import '@styles/blog.css';
 
 import { getCollection } from 'astro:content';
@@ -32,8 +32,8 @@ const blogPost = await getCollection('blog');
 </MainLayout>
 
 <style>
-  @import "tailwindcss"
+@import 'tailwindcss';
 a {
-    @apply text-blue-500 hover: underline;
+    @apply text-blue-500 hover:underline;
   }
 </style>
